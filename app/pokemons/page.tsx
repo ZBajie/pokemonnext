@@ -7,7 +7,9 @@ import PokemonsList from "../components/PokemonsList/PokemonsList"
 import PokemonSearch from "../components/PokemonSearch/PokemonSearch"
 
 const Pokemons = () => {
-  const [pokemonSingleUrl, setPokemonSingleUrl] = useState("")
+  const [pokemonSingleUrl, setPokemonSingleUrl] = useState(
+    "https://pokeapi.co/api/v2/pokemon/1/"
+  )
 
   const updatePokemonSingleUrl = (pokemonSingleUrl: string) => {
     setPokemonSingleUrl(pokemonSingleUrl)

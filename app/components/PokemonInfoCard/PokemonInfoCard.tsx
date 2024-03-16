@@ -13,6 +13,7 @@ const PokemonInfoCard: React.FC<PokemonSingleUrlProps> = ({
   updatePokemonImageUrl,
 }) => {
   const [isLoading, setIsLoading] = useState(false)
+  const [errorPopup, setErrorPopup] = useState(false)
   const pokemonUrl = pokemonSingleUrl
   const [pokemonFrontImage, setPokemonFrontImage] = useState("")
   const [pokemonBackImage, setPokemonBackImage] = useState("")
@@ -36,6 +37,9 @@ const PokemonInfoCard: React.FC<PokemonSingleUrlProps> = ({
         }
       } catch (err) {
         console.log(err)
+        if (isMounted) {
+          setErrorPopup(true)
+        }
       } finally {
         if (isMounted) {
           setIsLoading(false)
@@ -50,29 +54,50 @@ const PokemonInfoCard: React.FC<PokemonSingleUrlProps> = ({
 
   return (
     <>
-      {pokemonName && (
-        <div className="pokemon-card">
-          <h2>{pokemonName}</h2>
-          <div className="pokemon-info-card-image-div">
-            {pokemonFrontImage && (
-              <Image
-                src={pokemonFrontImage}
-                width={200}
-                height={200}
-                alt="Pokemon"
-              />
-            )}
-            {pokemonBackImage && (
-              <Image
-                src={pokemonBackImage}
-                width={200}
-                height={200}
-                alt="Pokemon"
-              />
-            )}
-          </div>
-        </div>
-      )}
+      <div className="pokemon-card">
+        {isLoading ? (
+          <p>Loading...</p>
+        ) : (
+          pokemonName && (
+            <>
+              <h2>{pokemonName}</h2>
+              <div className="pokemon-info-card-image-div">
+                {pokemonFrontImage && (
+                  <Image
+                    src={pokemonFrontImage}
+                    width={200}
+                    height={200}
+                    alt="Pokemon"
+                  />
+                )}
+                {pokemonBackImage && (
+                  <Image
+                    src={pokemonBackImage}
+                    width={200}
+                    height={200}
+                    alt="Pokemon"
+                  />
+                )}
+              </div>
+            </>
+          )
+        )}
+        {errorPopup && (
+          <>
+            <div className="error-box-background"></div>
+            <div className="error-box">
+              <button
+                onClick={() => {
+                  setErrorPopup(false)
+                }}
+              >
+                Close
+              </button>
+              <p>Search failed</p>
+            </div>
+          </>
+        )}
+      </div>
     </>
   )
 }
