@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./abstracts/colors";
+@import "./abstracts/fonts";
+@import "./abstracts/variables";
+@import "./base/base";
+@import "./../pokemons/pokemons.scss";
+@import "./../components/header.scss";

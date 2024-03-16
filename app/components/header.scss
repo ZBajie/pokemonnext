@@ -1,0 +1,23 @@
+.header-main {
+  margin: $margin-secondary;
+  padding: $padding-secondary;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 5px 5px 5px $background-color-secondary;
+  background: linear-gradient(green, yellow, green);
+  h1 {
+    font-family: $font-cursive;
+    color: $color-secondary;
+    font-size: 5rem;
+    font-weight: $font-weight-primary;
+    text-shadow: 5px 3px rgba(202, 12, 12);
+  }
+  img {
+    padding: 2rem;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at 100% 100%, yellow, rgb(244, 95, 95));
+    box-shadow: 10px 10px 10px yellow;
+  }
+}
