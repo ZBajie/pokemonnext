@@ -70,20 +70,22 @@ const PokemonList: React.FC<UpdatePokemonSingleUrlProps> = ({
                 )
               })}
           </ul>
-          <button
-            onClick={() => {
-              setPokemonsUrl(pokemons.previous)
-            }}
-          >
-            Prev
-          </button>
-          <button
-            onClick={() => {
-              setPokemonsUrl(pokemons.next)
-            }}
-          >
-            Next
-          </button>
+          <div className="pokemons-list-buttons-div">
+            <button
+              onClick={() => {
+                setPokemonsUrl(pokemons.previous)
+              }}
+            >
+              Prev
+            </button>
+            <button
+              onClick={() => {
+                setPokemonsUrl(pokemons.next)
+              }}
+            >
+              Next
+            </button>
+          </div>
         </>
       )}
     </section>

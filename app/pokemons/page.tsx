@@ -4,6 +4,7 @@ import React, { useState } from "react"
 import Header from "../components/Header/Header"
 import PokemonInfoCard from "../components/PokemonInfoCard/PokemonInfoCard"
 import PokemonsList from "../components/PokemonsList/PokemonsList"
+import PokemonSearch from "../components/PokemonSearch/PokemonSearch"
 
 const Pokemons = () => {
   const [pokemonSingleUrl, setPokemonSingleUrl] = useState("")
@@ -24,10 +25,13 @@ const Pokemons = () => {
     <main className="main-pokemons">
       <Header pokemonImageUrl={pokemonImageUrl} />
       <div>
-        <PokemonInfoCard
-          pokemonSingleUrl={pokemonSingleUrl}
-          updatePokemonImageUrl={updatePokemonImageUrl}
-        />
+        <div>
+          <PokemonInfoCard
+            pokemonSingleUrl={pokemonSingleUrl}
+            updatePokemonImageUrl={updatePokemonImageUrl}
+          />
+          <PokemonSearch updatePokemonSingleUrl={updatePokemonSingleUrl} />
+        </div>
         <PokemonsList updatePokemonSingleUrl={updatePokemonSingleUrl} />
       </div>
       <div className="poke">Pokemons</div>

@@ -1,0 +1,39 @@
+.pokemon-search {
+  min-width: 348px;
+  min-height: 250px;
+  height: fit-content;
+  background-color: $background-color-secondary;
+  color: $color-primary;
+  margin: $margin-secondary;
+  padding: $padding-secondary;
+  border: 10px dotted $border-color-primary;
+  box-shadow: 20px 20px 20px green;
+
+  h2 {
+    color: $color-secondary;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: $font-cursive;
+    font-size: 3rem;
+  }
+  div {
+    color: $color-tertiary;
+    margin-top: $margin-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+      margin-top: $margin-secondary;
+      padding: 0.5rem;
+      font-weight: 900;
+      background-color: $background-color-tertiary;
+      color: $color-tertiary;
+    }
+    input {
+      background-color: $background-color-primary;
+      padding: $padding-primary;
+      font-size: $font-size-secondary;
+      font-weight: $font-weight-primary;
+    }
+  }
+}

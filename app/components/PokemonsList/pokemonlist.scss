@@ -1,6 +1,6 @@
 .pokemons-list {
   background-color: $background-color-secondary;
-  color: $color-primary;
+  color: $color-secondary;
   margin: $margin-secondary;
   padding: $padding-secondary;
   border: 10px dotted $border-color-primary;
@@ -13,5 +13,17 @@
     cursor: pointer;
     font-size: 2rem;
     box-shadow: 5px 5px 5px $color-primary;
+  }
+  .pokemons-list-buttons-div {
+    margin-top: $margin-secondary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    button {
+      padding: $padding-primary;
+      background-color: $background-color-tertiary;
+      color: $color-tertiary;
+      font-weight: $font-weight-primary;
+    }
   }
 }

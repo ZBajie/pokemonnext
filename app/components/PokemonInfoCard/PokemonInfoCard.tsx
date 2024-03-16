@@ -53,7 +53,7 @@ const PokemonInfoCard: React.FC<PokemonSingleUrlProps> = ({
       {pokemonName && (
         <div className="pokemon-card">
           <h2>{pokemonName}</h2>
-          <div>
+          <div className="pokemon-info-card-image-div">
             {pokemonFrontImage && (
               <Image
                 src={pokemonFrontImage}

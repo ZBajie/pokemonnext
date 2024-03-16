@@ -1,5 +1,9 @@
 .main-pokemons {
   div {
     display: flex;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

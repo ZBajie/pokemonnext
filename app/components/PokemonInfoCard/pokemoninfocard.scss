@@ -14,8 +14,9 @@
     text-align: center;
     text-transform: capitalize;
   }
-  div {
+  .pokemon-info-card-image-div {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
   }
 }
