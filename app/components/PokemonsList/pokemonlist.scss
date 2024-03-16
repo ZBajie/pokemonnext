@@ -1,0 +1,17 @@
+.pokemons-list {
+  background-color: $background-color-secondary;
+  color: $color-primary;
+  margin: $margin-secondary;
+  padding: $padding-secondary;
+  border: 10px dotted $border-color-primary;
+
+  h2 {
+    font-size: $font-size-h2;
+    font-family: $font-cursive;
+  }
+  li:hover {
+    cursor: pointer;
+    font-size: 2rem;
+    box-shadow: 5px 5px 5px $color-primary;
+  }
+}

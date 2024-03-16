@@ -7,4 +7,6 @@
 @import "./abstracts/variables";
 @import "./base/base";
 @import "./../pokemons/pokemons.scss";
-@import "./../components/header.scss";
+@import "./../components/Header/header.scss";
+@import "./../components/PokemonInfoCard/pokemoninfocard.scss";
+@import "./../components/PokemonsList/pokemonlist.scss";
